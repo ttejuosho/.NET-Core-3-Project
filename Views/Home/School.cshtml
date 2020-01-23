@@ -1,0 +1,36 @@
+﻿@model WebAppSample.School
+@{
+    ViewData["Title"] = "School";
+}
+
+<div class="jumbotron">
+    <h1 class="text-center display-4">@Model.SchoolName</h1>
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-10">
+        <div class="card mb-3">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <img src="https://via.placeholder.com/150x240" class="card-img" alt="School Image">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <p class="card-text"><span class="font-weight-bold">Address</span>: @Model.SchoolAddress @Model.SchoolCity @Model.SchoolState</p>
+                        <p class="card-text"><span class="font-weight-bold">Phone 1</span>: @Model.SchoolPhone</p>
+                        <p class="card-text"><span class="font-weight-bold">Phone 2</span>: @Model.SchoolPhone2</p>
+                        <p class="card-text"><span class="font-weight-bold">Email Address</span>: @Model.SchoolEmail</p>
+                        <p class="card-text"><span class="font-weight-bold">www</span>: @Model.SchoolWeb</p>
+                        <p class="card-text"><span class="font-weight-bold">Principal Name</span>: @Model.PrincipalName</p>
+                        <p class="card-text"><span class="font-weight-bold">Founded</span>: @Model.Established</p>
+                        <p class="card-text"><span class="font-weight-bold">Student Count</span>: @Model.NumberOfStudents</p>
+                        <p class="card-text"><span class="font-weight-bold">Teacher Count</span>: @Model.NumberOfTeachers</p>
+                        <p class="card-text"><span class="font-weight-bold">Number of Campuses</span>: @Model.NumberOfCampuses</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

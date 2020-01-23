@@ -1,0 +1,35 @@
+﻿@model IEnumerable<WebAppSample.School>
+
+@{
+    ViewData["Title"] = "Schools";
+}
+
+<div class="jumbotron">
+    <h1 class="text-center display-4">Schoogle DB</h1>
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-10">
+        @foreach(var school in Model)
+        {
+            <div class="card mb-3">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <a href="~/School/@school.SchoolId"><img src="https://via.placeholder.com/400" class="card-img" alt="school image"></a>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title"><a href="~/School/@school.SchoolId">@school.SchoolName</a></h5>
+                            <p class="card-text"><span class="font-weight-bold">Address</span>: @school.SchoolAddress @school.SchoolCity @school.SchoolState</p>
+                            <p class="card-text"><span class="font-weight-bold">Phone</span>: @school.SchoolPhone</p>
+                            <p class="card-text"><span class="font-weight-bold">Email Address</span>: @school.SchoolEmail</p>
+                            <p class="card-text"><span class="font-weight-bold">Website</span>: @school.SchoolWeb</p>
+                            <p class="card-text"><span class="font-weight-bold">Principal Name</span>: @school.PrincipalName</p>
+                            <p class="card-text"><span class="font-weight-bold">Established</span>: @school.Established</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
